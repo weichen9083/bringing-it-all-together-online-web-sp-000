@@ -3,11 +3,10 @@ class Dog
 attr_accessor :id, :name, :breed 
 
 
-    def initialize(id=nil, name, album)
-      @id = id
-      @name = name
-      @album = album
-    end
+def initialize(anything)
+  anything.each {|key, value| self.send(("#{key}="), value)}
+  
+  end
 
   
 
